@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('invoice_products', function (Blueprint $table) {
             $table->id();
             $table->string('qty',50);
-            $table->decimal('sale_price',8,2);
+            $table->string('sale_price', 50);
 
             $table->foreignId('user_id')->constrained()->cascadeOnUpdate()->restrictOnDelete();
 
